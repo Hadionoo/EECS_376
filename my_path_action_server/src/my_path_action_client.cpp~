@@ -86,7 +86,7 @@ ROS_INFO("ALARM ON");
     twist_cmd.angular.x=0.0;
     twist_cmd.angular.y=0.0;
     //twist_cmd_publisher.publish(twist_cmd);
-    twist_cmd.angular.z=yaw_rate;  
+    twist_cmd.angular.z=0.0;  
         goal.pose = twist_cmd;
         action_client.sendGoal(goal,&doneCb);
     ros::spinOnce();

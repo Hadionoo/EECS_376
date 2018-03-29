@@ -67,8 +67,8 @@ void MyPathActionServer::executeCB(const actionlib::SimpleActionServer<my_path_a
           as_.setAborted(result_); // tell the client we have given up on this goal; send the result message as well
           return; // done with callback
 
-    //feedback_.fdbk = 1; // populate feedback message with current countdown value
- 	   //as_.publishFeedback(feedback_); // send feedback to the action client that requested this goal   
+    feedback_.fdbk = 1; // populate feedback message with current countdown value
+ 	   as_.publishFeedback(feedback_); // send feedback to the action client that requested this goal   
      }
 
     result_.result_msg = 0; //value should be zero, if completed countdown
